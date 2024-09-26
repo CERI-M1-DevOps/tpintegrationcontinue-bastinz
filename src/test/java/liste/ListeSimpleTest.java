@@ -87,6 +87,13 @@ class ListeSimpleTest {
         assertEquals(0, listeATester.getSize());
     }
 
+    @Test
+    void supprimeElementNonExistant() {
+        listeATester.ajout(1);
+        listeATester.supprimePremier(2);
+        assertEquals(1, listeATester.getSize());
+    }
+
 
     @Test
     void supprimePremierEnPremierePosition() {
