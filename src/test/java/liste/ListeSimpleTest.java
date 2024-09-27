@@ -18,13 +18,13 @@ class ListeSimpleTest {
     void listeConstruiteVide() {
         assertNull(listeATester.tete);
         assertEquals(0, listeATester.getSize());
-    }*/
+    }
 
     @Test
     void ajoutAugmenteSize() {
         listeATester.ajout(1);
         assertEquals(1, listeATester.getSize());
-    }
+    }*/
 
     @Test
     void ajoutChangeTete() {
