@@ -51,4 +51,4 @@ jobs:
       run: |
         PROJECT_KEY=$(echo ${{ github.repository }} | sed 's-/-_-')
         echo $PROJECT_KEY
-        mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CERI-M1-DevOps_tpintegrationcontinue-bastinz
+        mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=$(echo ${{ github.repository }} | sed 's-/-_-')
