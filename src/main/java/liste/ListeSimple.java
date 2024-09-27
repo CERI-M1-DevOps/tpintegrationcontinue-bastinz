@@ -26,6 +26,11 @@ public class ListeSimple {
             courant.setElement(nouvelleValeur);
     }
 
+    /**
+     * Description de la méthode
+     * @param element description du premier paramètre
+     * @param nouvelleValeur description du second paramètre
+     */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
@@ -35,6 +40,9 @@ public class ListeSimple {
         }
     }
 
+    /**
+     * Description de la méthode toString
+     */
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
