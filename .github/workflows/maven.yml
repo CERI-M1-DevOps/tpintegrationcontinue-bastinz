@@ -24,7 +24,8 @@ jobs:
     - name: Nom du repo
       shell: bash
       run: |
-        echo "Nom du depot : ${{ github.repository }}"
+        PROJECT_KEY=$(echo ${{ github.repository }} | sed -i s-/-_-)
+        echo $PROJECT_KEY
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
@@ -47,4 +48,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        PROJECT_KEY: sed
       run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=CERI-M1-DevOps_tpintegrationcontinue-bastinz
