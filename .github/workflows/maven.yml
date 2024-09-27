@@ -21,11 +21,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Nom du repo
-      shell: bash
-      run: |
-        PROJECT_KEY=$(echo ${{ github.repository }} | sed 's-/-_-')
-        echo $PROJECT_KEY
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
@@ -48,7 +43,5 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      run: |
-        PROJECT_KEY=$(echo ${{ github.repository }} | sed 's-/-_-')
-        echo $PROJECT_KEY
+      run:
         mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=$(echo ${{ github.repository }} | sed 's-/-_-')
