@@ -1,0 +1,30 @@
+name : documentation
+
+on:
+  push:
+    branches: "main"
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+
+
+permissions :
+  contents: write
+
+jobs:
+  doc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: 'temurin'
+      - name: Generate javadoc
+        run: mvn javadoc::javadoc
+      - name: Publish website
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/reports/apidocs/
