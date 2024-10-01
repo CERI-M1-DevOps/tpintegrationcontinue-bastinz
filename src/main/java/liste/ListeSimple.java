@@ -41,7 +41,7 @@ public class ListeSimple {
     }
 
     /**
-     * Description de la méthode toString
+     * Description de la méthode toString avec un nouveau texte
      */
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
