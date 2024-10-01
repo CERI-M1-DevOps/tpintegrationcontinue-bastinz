@@ -27,7 +27,7 @@ public class ListeSimple {
     }
 
     /**
-     * Description de la méthode
+     * Description de la méthode modifieTous avec un nouveau texte
      * @param element description du premier paramètre
      * @param nouvelleValeur description du second paramètre
      */
