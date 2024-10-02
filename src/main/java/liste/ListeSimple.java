@@ -56,6 +56,10 @@ public class ListeSimple {
         return sb.toString();
     }
 
+    /**
+     * Description de la méthode
+     * @param element description du premier paramètre
+     */
     public void supprimePremier(Object element) {
         if (tete != null) {
             if (tete.getElement() == element) {
