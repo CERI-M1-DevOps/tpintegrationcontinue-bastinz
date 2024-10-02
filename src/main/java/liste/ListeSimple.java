@@ -56,6 +56,7 @@ public class ListeSimple {
         return sb.toString();
     }
 
+
     /**
      * Description de la méthode supprimePremier encore un essai
      * @param element description du premier paramètre
