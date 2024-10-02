@@ -57,7 +57,7 @@ public class ListeSimple {
     }
 
     /**
-     * Description de la méthode
+     * Description de la méthode supprimePremier
      * @param element description du premier paramètre
      */
     public void supprimePremier(Object element) {
