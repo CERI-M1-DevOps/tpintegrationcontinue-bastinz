@@ -57,7 +57,7 @@ public class ListeSimple {
     }
 
     /**
-     * Description de la méthode supprimePremier
+     * Description de la méthode supprimePremier encore un essai
      * @param element description du premier paramètre
      */
     public void supprimePremier(Object element) {
@@ -79,7 +79,6 @@ public class ListeSimple {
             }
         }
     }
-
 
     public void supprimeTous(int element) {
        tete = supprimeTousRecurs(element, tete);
