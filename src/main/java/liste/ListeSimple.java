@@ -80,6 +80,7 @@ public class ListeSimple {
         }
     }
 
+
     public void supprimeTous(int element) {
        tete = supprimeTousRecurs(element, tete);
     }
