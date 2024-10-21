@@ -13,6 +13,11 @@ public class ListeSimple {
         size++;
     }
 
+    /**
+     * Description de la méthode
+     * @param element description du premier paramètre
+     * @param nouvelleValeur description du second paramètre
+     */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
@@ -21,6 +26,11 @@ public class ListeSimple {
             courant.setElement(nouvelleValeur);
     }
 
+    /**
+     * Description de la méthode modifieTous avec un nouveau texte
+     * @param element description du premier paramètre
+     * @param nouvelleValeur description du second paramètre
+     */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
@@ -30,6 +40,9 @@ public class ListeSimple {
         }
     }
 
+    /**
+     * Description de la méthode toString avec un nouveau texte
+     */
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
@@ -43,6 +56,11 @@ public class ListeSimple {
         return sb.toString();
     }
 
+
+    /**
+     * Description de la méthode supprimePremier encore un essai
+     * @param element description du premier paramètre
+     */
     public void supprimePremier(Object element) {
         if (tete != null) {
             if (tete.getElement() == element) {
@@ -120,7 +138,8 @@ public class ListeSimple {
     public void echanger(Noeud r1, Noeud r2) {
         if (r1 == r2)
             return;
-        Noeud precedentR1, precedentR2;
+        Noeud precedentR1;
+        Noeud precedentR2;
         if (r1 != tete && r2 != tete) {
             precedentR1 = getPrecedent(r1);
             precedentR2 = getPrecedent(r2);
@@ -131,7 +150,7 @@ public class ListeSimple {
             precedentR2.setSuivant(tete);
             tete = r2;
         }
-        else if (r2 == tete) {
+        else {
             precedentR1 = getPrecedent(r1);
             precedentR1.setSuivant(tete);
             tete = r1;
@@ -140,5 +159,6 @@ public class ListeSimple {
         r2.setSuivant(r1.getSuivant());
         r1.setSuivant(temp);
     }
+
 
 }
