@@ -25,7 +25,12 @@ public class ListeSimple {
         if (courant != null)
             courant.setElement(nouvelleValeur);
     }
-
+    
+    /**
+     * Description de la méthode modifieTous
+     * @param element description du premier paramètre
+     * @param nouvelleValeur description du second paramètre
+     */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
