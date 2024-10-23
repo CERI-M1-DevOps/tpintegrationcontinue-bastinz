@@ -22,7 +22,7 @@ jobs:
           java-version: '21'
           distribution: 'corretto'
       - name: Generate javadoc
-        run: mvn javadoc::javadoc
+        run: mvn -B javadoc::javadoc
       - name: Publish website
         uses: peaceiris/actions-gh-pages@v4
         with:
