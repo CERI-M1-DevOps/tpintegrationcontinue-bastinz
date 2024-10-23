@@ -26,11 +26,6 @@ public class ListeSimple {
             courant.setElement(nouvelleValeur);
     }
 
-    /**
-     * Description de la méthode modifieTous avec un nouveau texte
-     * @param element description du premier paramètre
-     * @param nouvelleValeur description du second paramètre
-     */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
@@ -53,11 +48,6 @@ public class ListeSimple {
         return sb.toString();
     }
 
-
-    /**
-     * Description de la méthode supprimePremier et je change le texte
-     * @param element description du premier paramètre
-     */
     public void supprimePremier(Object element) {
         if (tete != null) {
             if (tete.getElement() == element) {
@@ -156,6 +146,5 @@ public class ListeSimple {
         r2.setSuivant(r1.getSuivant());
         r1.setSuivant(temp);
     }
-
 
 }
