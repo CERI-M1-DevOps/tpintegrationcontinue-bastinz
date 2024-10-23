@@ -39,7 +39,7 @@ public class ListeSimple {
             courant = courant.getSuivant();
         }
     }
-    
+
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
