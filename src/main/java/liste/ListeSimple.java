@@ -39,10 +39,7 @@ public class ListeSimple {
             courant = courant.getSuivant();
         }
     }
-
-    /**
-     * Description de la méthode toString avec un nouveau texte
-     */
+    
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
