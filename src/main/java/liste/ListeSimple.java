@@ -25,7 +25,7 @@ public class ListeSimple {
         if (courant != null)
             courant.setElement(nouvelleValeur);
     }
-    
+
     /**
      * Description de la méthode modifieTous
      * @param element description du premier paramètre
